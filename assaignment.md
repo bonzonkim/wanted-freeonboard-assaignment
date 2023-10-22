@@ -1,0 +1,21 @@
+### Q1. 내가 생각하는 클린 코드란?
+
+### Q2. 내가 생각하는 (프론트엔드에서의) 클린 코드란?
+
+### Q3. 내가 클린코드보다 중요하게 생각하는 것은?
+
+### Q4. 다음 중 선호하는 방식과 그 이유는?
+1.
+`Tab` vs `Space` 
+
+2.
+`세미콜론 O` vs `세미콜론 X`
+
+3.
+`count++; vs count += 1;` vs `count = count + 1;`
+
+4.
+`if (isLogin) {}` vs`if (isLogin === true) {}` 
+
+5.
+`isLogin && <HelloWanted />` vs `isLogin ? <HelloWanted /> : <></>` vs `isLogin ? <HelloWanted /> : null` vs `isLogin ? <HelloWanted /> : undfined`
