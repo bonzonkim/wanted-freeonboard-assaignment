@@ -1,21 +1,39 @@
 ### Q1. 내가 생각하는 클린 코드란?
+가독성이 좋아 내가 작성한 코드를 협업하는 팀원이 알아보기 쉽고, 코드리뷰가 쉬우며, 작동이 잘 되는 코드입니다.
 
 ### Q2. 내가 생각하는 (프론트엔드에서의) 클린 코드란?
+단순히 길이가 짧은 코드가 아닌 내가 원하는 부분을 찾기 쉬운 코드이며,  
+변수명, 파일명 등의 정의가 정확해 협업한 팀원에게 물어보지 않아도 쉽게 찾을수 있는 코드라고 생각합니다.
 
 ### Q3. 내가 클린코드보다 중요하게 생각하는 것은?
+들여쓰기(인덴트)를 중요하게 생각합니다.  
+들여쓰기 역시 클린코드의 일부라고 생각 하지만 가끔 들여쓰기가 제대로 되어있는 코드를 보면  
+가독성이 많이 떨어진다고 느껴지기 때문에 중요하게 생각합니다.
 
 ### Q4. 다음 중 선호하는 방식과 그 이유는?
-1.
-`Tab` vs `Space` 
 
-2.
-`세미콜론 O` vs `세미콜론 X`
 
-3.
-`count++; vs count += 1;` vs `count = count + 1;`
+1. `Tab` vs `Space`   
+들여쓰기를 할 때는 `Tab`을 선호하고 단순 띄어쓰기를 할 때는 `Space를` 선호합니다.
+둘의 사용 방식이 다르기 때문에 둘중에 어느것을 선호 한다는 없습니다.
+---
+  
+2. `세미콜론 O` vs `세미콜론 X`  
+프로그래밍을 Java로 시작해서 세미콜론이 있는걸 선호합니다.  
+클린코드와도 연관되지만 세미콜론이 있으면 문장 끝에 온점을 붙이는 것 처럼 느껴져서  
+한 코드의 끝이라는걸 쉽게 알 수 있습니다.
+---
 
-4.
-`if (isLogin) {}` vs`if (isLogin === true) {}` 
+3. `count++;` vs `count += 1;` vs `count = count + 1;`  
+count 변수를 1 씩 증가시킬 때는 `count++;`  제일 가독성이 좋다고 생각해 선호하고
+`count += 1;` 는 변수에 1보다 큰 값을 증가시킬 때 유용해서 선호합니다.
+---
 
-5.
-`isLogin && <HelloWanted />` vs `isLogin ? <HelloWanted /> : <></>` vs `isLogin ? <HelloWanted /> : null` vs `isLogin ? <HelloWanted /> : undfined`
+4. `if (isLogin) {}` vs`if (isLogin === true) {}`   
+(isLogin)이 true로 평가될때 조건을 충족하는 코드 이기때문에 (isLogin === true)는 불필요한 중복이라 생각해서
+`if (isLogin) {}` 를 선호합니다.
+---
+
+5. `isLogin && <HelloWanted />` vs `isLogin ? <HelloWanted /> : <></>` vs `isLogin ? <HelloWanted /> : null` vs `isLogin ? <HelloWanted /> : undfined`  
+예기치 않은 오류를 피하기 위해 `null` 이나 `undifned`를 반환하지 않고, 조건부 렌더링을 하기 위해 `isLogin ? <HelloWanted /> : <></>`   
+`isLogin && <HelloWanted />` 가 적합하나 개인적으로 `isLogin && <HelloWanted />` 가 더 가독성이 좋기 때문에 선호합니다.
